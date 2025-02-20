@@ -1,0 +1,16 @@
+```javascript
+function MyComponent() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log('Effect runs'); // This line will only log once now.
+  }, []); // Empty dependency array correctly makes the effect run only once.
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
+```
